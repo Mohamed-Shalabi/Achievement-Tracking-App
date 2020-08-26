@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Achievement App</string>
+    <string name="today_progress">Today Progress: %1$d minutes</string>
+    <string name="_100_minutes">%1$d minutes</string>
+    <string name="progress">progress: %1$d minutes</string>
+    <string name="date">%1$s</string>
+</resources>

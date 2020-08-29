@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import com.mshalaby612.achievementtracker.calculateTodayTime
 import com.mshalaby612.achievementtracker.data.SHARED_PREFERENCES_NAME
 import com.mshalaby612.achievementtracker.data.SHARED_PREFERENCES_TODAY_PROGRESS
 
@@ -46,13 +47,13 @@ class DailyProgressReceiver : BroadcastReceiver() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             (context.getSystemService(Context.ALARM_SERVICE) as AlarmManager).setExactAndAllowWhileIdle(
                 AlarmManager.RTC_WAKEUP,
-                System.currentTimeMillis() + 60 * 60 * 1000 - (System.currentTimeMillis() + 60 * 60 * 1000) % (24 * 60 * 60 * 1000),
+                calculateTodayTime(),
                 pendingIntent
             )
         } else {
             (context.getSystemService(Context.ALARM_SERVICE) as AlarmManager).setExact(
                 AlarmManager.RTC_WAKEUP,
-                System.currentTimeMillis() + 60 * 60 * 1000 - (System.currentTimeMillis() + 60 * 60 * 1000) % (24 * 60 * 60 * 1000),
+                calculateTodayTime(),
                 pendingIntent
             )
         }

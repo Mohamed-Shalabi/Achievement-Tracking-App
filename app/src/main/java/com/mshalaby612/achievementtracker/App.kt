@@ -5,6 +5,7 @@ import android.app.Application
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.SystemClock
 import com.mshalaby612.achievementtracker.recievers.DailyProgressReceiver
 import java.util.*
 
@@ -14,7 +15,6 @@ class App : Application() {
         val intent = Intent(this, DailyProgressReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(this, 1, intent, Intent.FILL_IN_ACTION)
         val calendar: Calendar = Calendar.getInstance().apply {
-            timeInMillis = System.currentTimeMillis()
             set(Calendar.HOUR_OF_DAY, 23)
             set(Calendar.MINUTE, 59)
             set(Calendar.SECOND, 59)

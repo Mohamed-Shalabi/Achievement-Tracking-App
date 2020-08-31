@@ -47,13 +47,13 @@ class DailyProgressReceiver : BroadcastReceiver() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             (context.getSystemService(Context.ALARM_SERVICE) as AlarmManager).setExactAndAllowWhileIdle(
                 AlarmManager.RTC_WAKEUP,
-                calculateTodayTime(),
+                calculateTodayTime() + 24 * 60 * 60 * 1000,
                 pendingIntent
             )
         } else {
             (context.getSystemService(Context.ALARM_SERVICE) as AlarmManager).setExact(
                 AlarmManager.RTC_WAKEUP,
-                calculateTodayTime(),
+                calculateTodayTime() + 24 * 60 * 60 * 1000,
                 pendingIntent
             )
         }

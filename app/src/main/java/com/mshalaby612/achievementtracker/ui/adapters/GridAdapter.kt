@@ -19,7 +19,6 @@ class GridAdapter(
     class GridViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
 
-        var imageView: ImageView = itemView.findViewById(R.id.grid_image)
         var textView: TextView = itemView.findViewById(R.id.grid_text)
 
     }
@@ -35,7 +34,6 @@ class GridAdapter(
     override fun onBindViewHolder(holder: GridViewHolder, position: Int) {
         val ingredient = ingredients[position]
         holder.apply {
-            imageView.setImageResource(ingredient.image)
             textView.text = ingredient.timeMinutes.toString()
             itemView.setOnClickListener {
                 clickAction.invoke(position)
@@ -52,6 +50,11 @@ class MyGridLayoutManager(context: Context, spanCount: Int) : GridLayoutManager(
 
     override fun canScrollVertically(): Boolean {
         return false
+    }
+
+    override fun checkLayoutParams(lp: RecyclerView.LayoutParams): Boolean {
+        lp.height = width * 2 / 7
+        return true
     }
 
 

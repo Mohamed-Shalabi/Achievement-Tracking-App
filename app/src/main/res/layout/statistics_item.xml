@@ -30,7 +30,7 @@
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:text="Wed 26 Aug, 2020"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/secondaryTextColor"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent" />

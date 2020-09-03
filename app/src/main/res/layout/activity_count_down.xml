@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
+    android:background="@color/primaryDarkColor"
     tools:context=".ui.activities.CountDownActivity">
 
     <androidx.cardview.widget.CardView
@@ -31,7 +31,7 @@
                 android:maxLines="1"
                 android:text="00:00"
                 android:textAlignment="center"
-                android:textColor="#E8FDFF"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="88dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/start_pause_button"

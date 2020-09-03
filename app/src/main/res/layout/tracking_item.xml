@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/primaryColor"
         app:cardCornerRadius="8dp"
         app:cardElevation="2dp">
 
@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/date"
-                android:textColor="@android:color/white"
+                android:textColor="@color/secondaryTextColor"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/tv_progress"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -37,7 +37,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/progress"
-                android:textColor="@android:color/white"
+                android:textColor="@color/secondaryTextColor"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

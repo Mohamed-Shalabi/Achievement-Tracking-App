@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
+    android:background="@color/primaryDarkColor"
     tools:context=".ui.activities.TrackingActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@color/primaryTextColor" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_tracking"
@@ -32,6 +32,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="No Data"
+        android:textColor="@color/secondaryTextColor"
         android:textSize="28sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-light"

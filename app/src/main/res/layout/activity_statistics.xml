@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/primaryDarkColor"
     tools:context=".ui.activities.StatisticsActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@color/primaryTextColor" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint1"
@@ -34,7 +34,7 @@
             android:layout_margin="8dp"
             android:fontFamily="cursive"
             android:text="Best day"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/secondaryTextColor"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="24 Aug, 2020"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/secondaryTextColor"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
@@ -62,7 +62,7 @@
             android:layout_marginEnd="8dp"
             android:text="@string/_100_minutes"
             android:textAlignment="viewEnd"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/secondaryTextColor"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
@@ -87,7 +87,7 @@
             android:fontFamily="cursive"
             android:text="Progress in the last 7 days"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/secondaryTextColor"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

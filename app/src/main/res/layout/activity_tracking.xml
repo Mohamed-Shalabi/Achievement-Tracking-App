@@ -11,6 +11,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:titleTextAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
+        app:title="tracking"
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/primaryTextColor" />
 

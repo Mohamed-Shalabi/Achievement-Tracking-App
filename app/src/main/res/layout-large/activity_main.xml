@@ -28,6 +28,7 @@
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
+                    app:titleTextAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
                     android:layout_height="50dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:titleTextColor="@color/primaryTextColor" />
@@ -51,8 +52,9 @@
                         android:fontFamily="monospace"
                         android:text="@string/today_progress"
                         android:textAlignment="center"
-                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
                         android:textSize="15sp"
+                        android:textColor="@android:color/black"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@id/progressBar"
                         app:layout_constraintEnd_toEndOf="@id/progressBar"

@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryDarkColor"
+    android:background="@color/primaryColor"
     tools:context=".ui.activities.StatisticsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:titleTextAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/primaryTextColor" />
+        app:titleTextColor="@color/primaryTextColor"
+        app:title="statistics"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint1"
@@ -84,11 +86,10 @@
             android:id="@+id/tv_title2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="cursive"
             android:text="Progress in the last 7 days"
             android:textAlignment="center"
-            android:textColor="@color/secondaryTextColor"
-            android:textSize="28sp"
+            android:textSize="22sp"
+            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

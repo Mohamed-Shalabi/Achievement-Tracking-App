@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryDarkColor"
+    android:background="@color/primaryColor"
     tools:context=".ui.activities.SettingsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/primaryDarkColor"
+        app:titleTextAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Settings"
         app:titleTextColor="@color/primaryTextColor" />
@@ -33,8 +33,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Select your daily goal for 3 stars:"
-            android:textColor="@color/primaryDarkColor"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:text="0 minutes"
-            android:textColor="@color/secondaryTextColor"
+            android:textColor="@color/primaryDarkColor"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/select_goal"
             android:layout_marginBottom="6dp"
@@ -71,7 +71,7 @@
             android:layout_width="0dp"
             android:layout_height="0.5dp"
             android:layout_marginTop="32dp"
-            android:background="@color/secondaryLightColor"
+            android:background="@color/secondaryDarkColor"
             app:layout_constraintEnd_toEndOf="@id/seekBar"
             app:layout_constraintStart_toStartOf="@id/tv_seekBar"
             app:layout_constraintTop_toBottomOf="@id/seekBar" />
@@ -82,6 +82,8 @@
             android:fontFamily="monospace"
             android:text="Auto Start The Session?"
             android:textColor="@color/primaryDarkColor"
+            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/divider2"
@@ -101,7 +103,7 @@
             android:layout_width="0dp"
             android:layout_height="0.5dp"
             android:layout_marginTop="108dp"
-            android:background="@color/secondaryLightColor"
+            android:background="@color/secondaryDarkColor"
             app:layout_constraintEnd_toEndOf="@id/seekBar"
             app:layout_constraintStart_toStartOf="@id/tv_seekBar"
             app:layout_constraintTop_toBottomOf="@id/divider1" />
@@ -111,6 +113,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:text="Select the ringtone"
+            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
             android:textColor="@color/primaryDarkColor"
             android:textSize="15sp"
             android:textStyle="bold"

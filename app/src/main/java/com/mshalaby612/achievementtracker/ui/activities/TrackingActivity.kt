@@ -24,27 +24,29 @@ class TrackingActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         title = "Daily Progress"
 
-        val coroutine = GlobalScope.async {
+        GlobalScope.launch {
             database = ProgressDaysDatabase.getAppDataBase(applicationContext)
             daysOfProgress =
-                (database?.getProgressDayDao()?.getAll() as MutableList<ProgressDay>?)!!
-        }
-        if (daysOfProgress.size > 0) {
-            tv_no_data.visibility = View.GONE
-            GlobalScope.launch {
-                coroutine.await()
+                (database?.getProgressDayDao()?.getAll() as MutableList<ProgressDay>?)
+                    ?: mutableListOf()
+
+            if (daysOfProgress.size > 0) {
+
                 withContext(Dispatchers.Main) {
+                    tv_no_data.visibility = View.GONE
                     recycler_tracking.setHasFixedSize(true)
                     val adapter = TrackingAdapter(daysOfProgress) { }
                     recycler_tracking.apply {
                         layoutManager = LinearLayoutManager(this@TrackingActivity)
                         this.adapter = adapter
                     }
+
                 }
+            } else {
+                tv_no_data.visibility = View.VISIBLE
             }
-        } else {
-            tv_no_data.visibility = View.VISIBLE
         }
+
     }
 
 }

@@ -6,7 +6,7 @@
             <solid android:color="#000000" />
             <stroke
                 android:width="3dp"
-                android:color="@color/secondaryDarkColor"
+                android:color="@color/secondaryLightColor"
                 android:dashWidth="3dp"
                 android:dashGap="0dp" />
             <corners android:radius="5dp" />
@@ -16,14 +16,14 @@
     <!-- Define the progress properties like start color, end color etc -->
     <item
         android:id="@android:id/progress"
-        android:bottom="2dp"
-        android:left="2dp"
-        android:right="2dp"
-        android:top="2dp">
+        android:bottom="2.9dp"
+        android:left="2.9dp"
+        android:right="2.9dp"
+        android:top="2.9dp">
         <clip>
             <shape>
                 <solid android:color="@color/secondaryLightColor" />
-                <corners android:radius="3dp" />
+                <corners android:radius="2dp" />
             </shape>
         </clip>
     </item>

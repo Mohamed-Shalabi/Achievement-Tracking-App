@@ -9,9 +9,11 @@
         style="@android:style/Widget.Material.ProgressBar.Horizontal"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingVertical="32dp"
         android:rotation="270"
+        android:progressDrawable="@drawable/custom_progress_bar2"
         app:layout_constraintBottom_toTopOf="@+id/tv_statistics_day"
         app:layout_constraintDimensionRatio="4:1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +30,10 @@
         app:layout_constraintHeight_percent="0.2"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
+        android:textStyle="bold"
         android:text="Wed 26 Aug, 2020"
         android:textColor="@color/secondaryTextColor"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
